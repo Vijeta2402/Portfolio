@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&family=Questrial&display=swap"
+    rel="stylesheet" />
+
+  <!-- boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Hello, It's Me</h3>
+      <h1>Vijeta Jaiswal</h1>
+      <h3>And I'm a <span class="multiple-text"></span></h3>
+      <p>
+        I am a passionate Frontend Developer skilled in React.js, JavaScript, HTML, CSS, and Bootstrap.
+        I build responsive and user-friendly web applications with clean and efficient code.
+        I also have basic knowledge of Python and backend concepts. I enjoy working on real-world projects and
+        continuously improving my development skills.
+        I am currently looking for opportunities where I can contribute, learn, and grow as a Software Engineer.
+
+      </p>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/vijeta-jaiswal-91494035b/"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/Vijeta2402/Tops-Final2/tree/master/bridal-website"><i class="bx bxl-github"></i></a>
+      </div>
+      <a href="assets/cv.pdf" class="btn">Download CV</a>
+    </div>
+
+    <div class="home-img">
+      <img src="images/profile.png" alt="" />
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="images/about.png" alt="" />
+    </div>
+
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Web Development!</h3>
+      <p>
+        I have completed professional training in web development, gaining hands-on
+        experience in building responsive and real-world applications, along with a
+        basic understanding of backend development and API integration.
+      </p>
+
+      <p id="more-text" style="display: none;">
+        I have worked on projects like a Bridal Makeup Booking Website and a Currency Counter application using
+        JavaScript.
+        I enjoy solving real-world problems and continuously improving my development skills.
+
+        I am currently seeking an opportunity to start my career as a Software Engineer and grow in a professional
+        environment.
+      </p>
+
+      <button class="btn" onclick="toggleText()">Read More</button>
+    </div>
+  </section>
+
+  <!-- education -->
+  <section class="education" id="education">
+    <h2 class="heading">Education<span>/Training</span></h2>
+    <div class="container">
+      <div class="education-horizontal-timeline">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="single-horizontal-timeline">
+              <div class="experience-time">
+                <h2>2022 - 2025</h2>
+                <h3>B.E.<span> (Computer Engineering)</span></h3>
+              </div><!--/.experience-time-->
+              <div class="timeline-horizontal-border">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <span class="single-timeline-horizontal"></span>
+              </div>
+              <div class="timeline">
+                <div class="timeline-content">
+                  <h4 class="title">
+                    Gujarat technological university
+                  </h4>
+                  <h5>Ahmedabad, Gujarat, India</h5>
+                  <p class="description">
+                    Completed Bachelor of Engineering in Computer Engineering.
+                    Passionate about web development with skills in HTML, CSS and JavaScript, and currently expanding
+                    knowledge in Python and Flask.
+                  </p>
+                  </p>
+                </div><!--/.timeline-content-->
+              </div><!--/.timeline-->
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="single-horizontal-timeline">
+              <div class="experience-time">
+                <h2>2019 - 2022</h2>
+                <h3>Diploma <span> (information technology )</span> </h3>
+              </div><!--/.experience-time-->
+              <div class="timeline-horizontal-border">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <span class="single-timeline-horizontal"></span>
+              </div>
+              <div class="timeline">
+                <div class="timeline-content">
+                  <h4 class="title">
+                    Govt. Girls Polytechnic, Varanasi
+                  </h4>
+                  <h5>Varanasi, Uttar Pradesh, India</h5>
+                  <p class="description">
+                    Completed Diploma in Information Technology with fundamental knowledge of programming, computer
+                    basics and web technologies.
+                  </p>
+                </div><!--/.timeline-content-->
+              </div><!--/.timeline-->
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="single-horizontal-timeline">
+              <div class="experience-time">
+                <h2>2025 - Offline</h2>
+                <h3>Web Development <span>& </span>Frontend </h3>
+              </div><!--/.experience-time-->
+              <div class="timeline-horizontal-border">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <span class="single-timeline-horizontal spacial-horizontal-line
+									"></span>
+              </div>
+              <div class="timeline">
+                <div class="timeline-content">
+                  <h4 class="title">
+                    Tops Technologies
+                  </h4>
+                  <h5>Ahmedabad, Gujarat, India</h5>
+                  <p class="description">
+                    Completed Web Development and Frontend Development training with hands-on experience in HTML, CSS,
+                    JavaScript, and React for building responsive user interfaces.
+                    Additionally, have basic knowledge of Python and worked on a group e-commerce project during
+                    graduation, applying Python fundamentals in development.
+                  </p>
+                  </p>
+                </div><!--/.timeline-content-->
+              </div><!--/.timeline-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- skills -->
+  <section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+      <div class="skills-box">
+        <h3 class="techno"> Skills</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Bootstrap</li>
+          <li>React.js</li>
+          <li>Python (Basic)</li>
+          <li>Responsive Web Design</li>
+          <li>Time Management</li>
+        </ul>
+      </div>
+
+      <div class="skills-box">
+        <h3 class="tools">Tools</h3>
+        <ul>
+          <li>npm / yarn</li>
+          <li>Git, GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+      <div class="skills-box">
+        <h3 class="hosting">Hosting</h3>
+        <ul>
+          <li>Netlify</li>
+          <li>Render</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- services -->
+
+  <section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Web Development</h3>
+        <p>
+          I build modern and responsive websites using HTML, CSS, Bootstrap, and JavaScript.
+          I focus on clean UI and good user experience.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Frontend Development (React)</h3>
+        <p>
+          I have developed responsive and user-friendly web interfaces using React.
+        </p>
+
+        <p class="more-text" style="display: none;">
+          I have worked on projects like a Bridal Makeup Website with routing and structured UI components.
+        </p>
+
+        <button class="btn" onclick="toggleServiceText(this)">Read More</button>
+      </div>
+
+      <div class="services-box">
+        <i class="bx bx-code-alt"></i>
+        <h3>Backend Development (Python)</h3>
+        <p>
+          I have worked on a group-based e-commerce project using Python during my college.
+        </p>
+        <p class="more-text" style="display: none;">
+          I have a basic understanding of backend concepts such as database handling, user flow, and application
+          structure.
+        </p>
+        <button class="btn" onclick="toggleServiceText(this)">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Project</span></h2>
+
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="images/port1.jpg" alt="" />
+        <div class="portfolio-layer">
+          <h4>Frontend Learning Project</h4>
+          <p>
+          <p>
+            Designed and developed a static website using HTML and CSS during my learning phase.
+          </p>
+          </p>
+          <a href="https://css-coffiee.netlify.app/"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="images/port2.jpg" alt="" />
+        <div class="portfolio-layer">
+          <h4>Bridal Website</h4>
+          <p>
+            Bidal Makeup Booking Website with React.js, featuring responsive design and routing for seamless navigation.
+          </p>
+          <a href="https://bridal-frontend.onrender.com/"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="images/port3.jpg" alt="" />
+        <div class="portfolio-layer">
+          <h4>Cash Calculator</h4>
+          <p>
+            A cash calculator built using JavaScript to calculate total currency based on user input.
+          </p>
+          <a href="https://javascript-currency.netlify.app/"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+
+      <div class="portfolio-box">
+        <img src="images/port4.jpg" alt="" />
+        <div class="portfolio-layer">
+          <h4>Pending..</h4>
+          <p> Backend project using Python (in progress).
+          </p>Under Development</p>
+          <a href="#"><i class="bx bx-link-external"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form action="" method="post">
+      <div class="input-box">
+        <input type="text" name="Name" placeholder="Full Name" required />
+        <input type="email" name="Email" placeholder="Email Address" required />
+      </div>
+      <div class="input-box">
+        <input type="number" name="Number" placeholder="Mobile Number" />
+        <input type="text" name="Subject" placeholder="Email Subject" />
+      </div>
+      <textarea name="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn" />
+    </form>
+  </section>
+
+  <!-- footer -->
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2025 by vijeta jaiswal | All Rights Reserved|</p>
+    </div>
+
+    <div class="footer-iconTap">
+      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scroll reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- typed js -->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- custom js -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
