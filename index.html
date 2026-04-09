@@ -318,7 +318,7 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="" method="post">
+    <form  name ="contact-form">
       <div class="input-box">
         <input type="text" name="Name" placeholder="Full Name" required />
         <input type="email" name="Email" placeholder="Email Address" required />
@@ -354,6 +354,18 @@
 
   <!-- custom js -->
   <script src="js/script.js"></script>
+  <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbzt_Q29lmRbPpkox5YLka6txEnTB_COHPtXPvi9Jm7lF1Cm1X6T1_f76fNPsTh9WVA/exec'
+	const form = document.forms['contact-form']
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 </body>
 
 </html>
