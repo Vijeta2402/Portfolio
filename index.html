@@ -354,28 +354,27 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- custom js -->
-
 <script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyuRvPX3wpNBmVArqYlO8iE-DMAGsndphPddX5Id1vY1Fs_HUPrvFq2SI6Mst5eW8c9/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyJD2ok7ZVgz6ZqjvglAHHrIsHK0K5ESJSz6OyLH-lEeVcwc-Rb9th5pgw6VTrei79F/exec'
 const form = document.forms['contact-form']
+
 form.addEventListener('submit', e => {
   e.preventDefault()
 
-  // 1️⃣ Turant success feedback
-  alert("Message sent successfully ✅")
-  form.reset()
-
-  // 2️⃣ Backend ko send karo asynchronously (fire-and-forget)
   fetch(scriptURL, {
     method: 'POST',
     body: new FormData(form)
-  }).catch(error => {
-    console.error("Data send failed:", error)
+  })
+  .then(response => {
+    alert("Message sent successfully ✅")
+    form.reset()
+  })
+  .catch(error => {
+    alert("Error! Data not sent ❌")
+    console.error('Error!', error.message)
   })
 })
 </script>
-
-
 
 <script src="js/script.js"></script>
 </body>
