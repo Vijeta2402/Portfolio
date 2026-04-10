@@ -25,13 +25,15 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    overflow-y: hidden;
+    
+    overflow-x: hidden;
 }
 
 section {
-    min-width: 100vh;
     padding: 10rem 9% 2rem;
+    min-height: 100vh;
 }
+
 
 .header {
     position: fixed;
@@ -106,6 +108,7 @@ span {
 
 .home-img img {
     width: 35vw;
+  
     animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -194,7 +197,7 @@ span {
     min-height: 100vh;
    
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 .skills-box .techno {
     margin-right: 500px;
@@ -205,6 +208,8 @@ span {
 .skills-box .hosting{
     margin-right: 500px;
 }
+
+
 
 .skills-box {
     padding: 2rem;
@@ -364,9 +369,13 @@ span.single-timeline-horizontal {
 }
 
 .about-img img {
-    width: 40vw;
+    
+    max-width: 700px;
+    height: 500px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
 }
-
 .heading {
     text-align: center;
     font-size: 5rem;
@@ -618,7 +627,7 @@ span.single-timeline-horizontal {
     }
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     #menu-icon {
         display: block;
     }
@@ -657,19 +666,24 @@ span.single-timeline-horizontal {
         font-size: 5rem;
     }
 
+
     .home-img img {
-        width: 70vw;
+        width: 60%;
+        max-width: 250px;
         margin-top: 4rem;
     }
 
     .about {
         flex-direction: column;
+        text-align: center;
     }
 
-    .about img {
-        width: 70vh;
-        margin-top: 4rem;
+    .about-img img {
+        width: 70%;
+        max-width: 50px;
+        height: auto;
     }
+
 
     .services h2 {
         margin-bottom: 3rem;
@@ -682,7 +696,66 @@ span.single-timeline-horizontal {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
+} */
+@media (max-width: 768px) {
+
+    /* HOME */
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 60%;
+        max-width: 250px;
+        margin-top: 4rem;
+    }
+
+    /* ABOUT */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 70%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    /* SKILLS */
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-box {
+        width: 90%;
+    }
+
+    .skills-box .techno,
+    .skills-box .tools,
+    .skills-box .hosting {
+        margin-right: 0;
+    }
+
+    /* EDUCATION */
+    .education .row {
+        flex-direction: column;
+    }
+
+    .education .col-sm-4 {
+        width: 100%;
+    }
+
+    /* PORTFOLIO */
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
 }
+
+
+
 
 @media (max-width: 617px) {
     .portfolio-container {
@@ -705,9 +778,11 @@ span.single-timeline-horizontal {
         width: 90vh;
     }
 
-    .about-img img{
-        width: 90vh;
+   .about-img img {
+    width: 100%;
+    max-width: 300px;
     }
+
 
     .footer {
         flex-direction: column-reverse;
