@@ -42,6 +42,7 @@
       <h3>Hello, It's Me</h3>
       <h1>Vijeta Jaiswal</h1>
       <h3>And I'm a <span class="multiple-text"></span></h3>
+     
       <p>
         I am a passionate Frontend Developer skilled in React.js, JavaScript, HTML, CSS, and Bootstrap.
         I build responsive and user-friendly web applications with clean and efficient code.
@@ -58,7 +59,7 @@
     </div>
 
     <div class="home-img">
-      <img src="images/profile.png" alt="" />
+      <img src="images/profile.png" alt="" width="100" height="400" />
     </div>
   </section>
 
@@ -353,19 +354,29 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <!-- custom js -->
-  <script src="js/script.js"></script>
-  <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbzt_Q29lmRbPpkox5YLka6txEnTB_COHPtXPvi9Jm7lF1Cm1X6T1_f76fNPsTh9WVA/exec'
-	const form = document.forms['contact-form']
 
-	form.addEventListener('submit', e => {
-		e.preventDefault()
-		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-			.then(response => response.json())
-			.then(response => console.log('Success!', response))
-			.catch(error => console.error('Error!', error.message))
-	})
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyuRvPX3wpNBmVArqYlO8iE-DMAGsndphPddX5Id1vY1Fs_HUPrvFq2SI6Mst5eW8c9/exec'
+const form = document.forms['contact-form']
+form.addEventListener('submit', e => {
+  e.preventDefault()
+
+  // 1️⃣ Turant success feedback
+  alert("Message sent successfully ✅")
+  form.reset()
+
+  // 2️⃣ Backend ko send karo asynchronously (fire-and-forget)
+  fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form)
+  }).catch(error => {
+    console.error("Data send failed:", error)
+  })
+})
 </script>
-</body>
 
+
+
+<script src="js/script.js"></script>
+</body>
 </html>

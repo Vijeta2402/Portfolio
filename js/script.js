@@ -55,24 +55,13 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 // typed js
 
-/*const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Graphic Designer', 'Artist'],
+const typed = new Typed('.multiple-text', {
+    strings: ['Software Developer', 'Frontend Developer','Web Developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
     loop: true
-    });*/
-
-document.addEventListener("DOMContentLoaded", function () {
-    const typed = new Typed('.multiple-text', {
-        strings: [ 'Software Developer','Frontend Developer', 'Web Developer',],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true
     });
-});
-
 
 function toggleText() {
   let moreText = document.getElementById("more-text");             
