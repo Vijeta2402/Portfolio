@@ -25,7 +25,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    
+
     overflow-x: hidden;
 }
 
@@ -108,18 +108,20 @@ span {
 
 .home-img img {
     width: 35vw;
-  
+
     animation: floatImage 4s ease-in-out infinite;
 }
 
 @keyframes floatImage {
-    0%{
+    0% {
         transform: translateY(0)
     }
-    50%{
+
+    50% {
         transform: translateY(-2.4rem)
     }
-    100%{
+
+    100% {
         transform: translateY(0)
     }
 }
@@ -173,15 +175,18 @@ span {
 .skills .heading {
     font-size: 6rem;
 }
+
 .skills h2 {
     margin-bottom: 4rem;
-    
+
 }
+
 .skills-container {
     width: 100%;
     max-width: 1100px;
     display: flex;
-    justify-content: center;   /* center alignment */
+    justify-content: center;
+    /* center alignment */
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 5rem;
@@ -195,17 +200,20 @@ span {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-   
+
     max-width: 100%;
     overflow: visible;
 }
+
 .skills-box .techno {
     margin-right: 500px;
 }
-.skills-box .tools{
-   margin-right: 500px;
+
+.skills-box .tools {
+    margin-right: 500px;
 }
-.skills-box .hosting{
+
+.skills-box .hosting {
     margin-right: 500px;
 }
 
@@ -220,15 +228,18 @@ span {
 #skills .skills-box h3 {
     font-size: 3.4rem;
 }
+
 .skills-box {
     padding: 2rem;
     min-width: 250px;
     width: 300px;
     /* text-align: center; ❌ REMOVE this */
 }
+
 .skills-box li {
     margin-bottom: 0.6rem;
 }
+
 .skills-box h3 {
     text-align: center;
 }
@@ -240,6 +251,7 @@ span {
     margin: 0;
     text-align: left;
 }
+
 #skills .skills-box ul li {
     font-size: 1.6rem;
     line-height: 2.2rem;
@@ -285,22 +297,27 @@ span {
 .education .col-sm-4 {
     width: 30%;
 }
+
 .education {
     display: flex;
-    flex-direction: column;   /* ADD THIS */
+    flex-direction: column;
+    /* ADD THIS */
     justify-content: center;
     align-items: center;
     gap: 3rem;
     padding-top: 50px;
 }
+
 .education .heading {
     text-align: center;
     margin-bottom: 4rem;
     width: 100%;
 }
+
 .education-horizontal-timeline {
     padding: 80px 0;
 }
+
 /* TEXT SIZE FIX - EDUCATION */
 
 .education .experience-time h2 {
@@ -327,30 +344,47 @@ span {
 }
 
 /*.education-horizontal-timeline*/
-.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+.education-horizontal-timeline .col-sm-4 {
+    padding: 0 2px;
+}
 
-.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
-.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
-.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
-.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
+.single-horizontal-timeline .experience-time h3 {
+    text-transform: capitalize;
+}
+
+.single-horizontal-timeline .experience-time h3 span {
+    text-transform: lowercase;
+}
+
+.single-horizontal-timeline .timeline-content h5 {
+    margin: 15px 0;
+}
+
+.single-horizontal-timeline p {
+    color: #999fb3;
+    max-width: 335px;
+}
 
 /*.timeline-horizontal-border*/
 .timeline-horizontal-border {
-    display:  flex;
+    display: flex;
     align-items: center;
     padding: 26px 0 30px;
 }
+
 .timeline-horizontal-border i {
-    font-size:  10px;
+    font-size: 10px;
     color: #d92cf9;
-    margin-right:  5px;
+    margin-right: 5px;
 }
+
 span.single-timeline-horizontal {
-    display:  inline-block;
+    display: inline-block;
     background: #b2c1ce;
-    height:  1px;
+    height: 1px;
     width: 100%;
 }
+
 /* end of education fix */
 
 @media (max-width: 768px) {
@@ -374,13 +408,14 @@ span.single-timeline-horizontal {
 }
 
 .about-img img {
-    
+
     max-width: 700px;
     height: 500px;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
 }
+
 .heading {
     text-align: center;
     font-size: 5rem;
@@ -400,7 +435,8 @@ span.single-timeline-horizontal {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
-.services{
+
+.services {
     background: var(--bg-color);
 }
 
@@ -704,15 +740,38 @@ span.single-timeline-horizontal {
 } */
 @media (max-width: 768px) {
 
+    /* ✅ ADD THIS (MOST IMPORTANT) */
+    section {
+        padding: 8rem 3% 2rem;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+
     /* HOME */
     .home {
         flex-direction: column;
         text-align: center;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        /* 🔥 IMPORTANT */
+        align-items: center;
+        padding-top: 12rem;
+        /* 🔥 HEADER ke niche space */
+    }
+
+    .home-content {
+        text-align: center;
+        margin-top: 1rem;
     }
 
     .home-img img {
         width: 60%;
         max-width: 250px;
+        align-items: center;
         margin-top: 4rem;
     }
 
@@ -720,6 +779,10 @@ span.single-timeline-horizontal {
     .about {
         flex-direction: column;
         text-align: center;
+    }
+
+    .about-content h2 {
+        text-align: center !important;
     }
 
     .about-img img {
@@ -744,6 +807,33 @@ span.single-timeline-horizontal {
         margin-right: 0;
     }
 
+    /* SKILLS FIX */
+
+    @media (max-width: 768px) {
+
+        .skills-box ul {
+            list-style: none !important;
+            padding-left: 0 !important;
+            margin: 0 !important;
+            text-align: center !important;
+        }
+
+        .skills-box ul li {
+            text-align: center !important;
+            margin-bottom: 0.8rem;
+        }
+
+        /* remove old bullet system */
+        .skills-box ul li::before {
+            content: "• ";
+            color: var(--main-color);
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+
+    /* SKILLS PERFECT CENTER FIX */
+
     /* EDUCATION */
     .education .row {
         flex-direction: column;
@@ -758,7 +848,6 @@ span.single-timeline-horizontal {
         grid-template-columns: 1fr;
     }
 }
-
 
 
 
@@ -783,9 +872,9 @@ span.single-timeline-horizontal {
         width: 90vh;
     }
 
-   .about-img img {
-    width: 100%;
-    max-width: 300px;
+    .about-img img {
+        width: 100%;
+        max-width: 300px;
     }
 
 
@@ -793,7 +882,7 @@ span.single-timeline-horizontal {
         flex-direction: column-reverse;
     }
 
-    .footer p{
+    .footer p {
         text-align: center;
         margin-top: 2rem;
     }
